@@ -12,7 +12,7 @@ class info(models.Model):
     writer = models.CharField(max_length=500)
     plot = models.TextField()
     language = models.CharField(max_length=500)
-    county = models.CharField(max_length=500)
+    country = models.CharField(max_length=600)
     awards = models.CharField(max_length=500)
     poster = models.CharField(max_length=500)
     metascore = models.CharField(max_length=5)
@@ -20,7 +20,7 @@ class info(models.Model):
     imdbvotes = models.CharField(max_length=10)
     imdbid = models.CharField(max_length=25)
     type = models.CharField(max_length=500)
-    repsonse = models.CharField(max_length=500)
+    response = models.CharField(max_length=500)
     actors = models.CharField(max_length=1000)
 
     def __str__(self):
