@@ -1,0 +1,4 @@
+bbd/bbd/settings.py
+bin/*
+lib/*
+local/*
