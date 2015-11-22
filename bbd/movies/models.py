@@ -23,5 +23,5 @@ class info(models.Model):
     response = models.CharField(max_length=500)
     actors = models.CharField(max_length=1000)
 
-    def __str__(self):
-        return self.title
+    def __unicode__(self):
+        return "Title: %s" % self.title

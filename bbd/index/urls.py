@@ -1,9 +1,10 @@
 from django.conf.urls import url
-
+import movies
 from . import views
 
 urlpatterns = [
 	url(r'^login/$', views.Login),
 	url(r'^logout/$', views.Logout),
 	url(r'^home/$', views.Home),
+	url(r'^movies/$', views.movieview),
 ]
