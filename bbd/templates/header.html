@@ -1,0 +1,26 @@
+<head>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static "css/main.css" %}" />
+</head>
+<body>
+   <div id="content">
+	   <ul id="navbar">
+		  <li><a href="/home">Home</a></li>
+		  <li><a href="/movies">Movies</a></li>
+		  <li><a href="contact.asp">Contact</a></li>
+		  <li><a href="about.asp">About</a></li>
+		  <ul style="float:right;list-style-type:none;">
+		  	{% if user.is_authenticated %}
+		    <li><a href="/accounts/profile">Profile</a></li>
+		    <li><a href="/accounts/logout">Logout</a></li>
+		    {%  else %}
+		    <li><a href="/accounts/login">Login</a></li>
+		    {% endif %}
+		  </ul>
+		</ul>
+
+	
+		{% block content %}{% endblock %}
+	</div>
+
+</body>

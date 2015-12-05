@@ -22,11 +22,11 @@ def Login(request):
 				HttpResponse("Inactive user.")
 		else:
 			HttpResponseRedirect(settings.LOGIN_URL)
-	return render(request, "index/login.html", {'redirect_to': next})
+	return render(request, "index/accounts/login.html", {'redirect_to': next})
 
 def Logout(request):
 	logout(request)
-	return HttpResponseRedirect(settings.LOGIN_URL)
+	return render(request, "index/home.html", {'redirect_to': next})
 
 @login_required
 def Home(request):
