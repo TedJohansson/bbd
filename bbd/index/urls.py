@@ -9,7 +9,8 @@ urlpatterns = [
 	url(r'^accounts/logout/$', views.Logout),
 	url(r'^home/$', views.Home),
 	url(r'^movies/$', views.movieview),
-	url(r'^accounts/', include('profile_page.urls'))
+	url(r'^accounts/', include('profile_page.urls')),
+	url(r'^league/', include('league.urls'))
 ]
 
 if settings.DEBUG:
