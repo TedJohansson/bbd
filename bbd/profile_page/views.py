@@ -22,4 +22,4 @@ def user_profile(request):
 
  	args['form'] = form
 
- 	return render_to_response('profile.html', args)
+ 	return render_to_response('index/accounts/profile.html', args)

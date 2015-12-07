@@ -4,5 +4,15 @@
 <h1>Create a view</h1>
 
 <p>Let's do it</p>
+<form class="formlabel" action="/league/create/" method="post">
+	<fieldset>
+		<legend>Create League</legend>
+	    <input type="hidden" name="profile_id" value="{{ profile.id }}" />
+	    {% csrf_token %}
+        {{ form }}
+
+	    <input type="submit" value="Create">
+    </fieldset>
+</form>
 
 {% endblock %}

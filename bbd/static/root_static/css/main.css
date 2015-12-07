@@ -76,3 +76,10 @@ li {
 li:last-child {
     border-right: none;
 }
+.nav-parent ul {
+  display: none;
+  position: absolute;
+}
+form {
+  display: inline-block;
+}
