@@ -1,0 +1,5 @@
+{% if leagues %}
+{% for row in leagues %}
+	<li><a href="#{{ row.id }}">{{row.name}}</a></li>
+{% endfor %}
+{% endif %}

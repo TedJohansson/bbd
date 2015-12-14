@@ -1,10 +1,12 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.template import RequestContext
 from django.core.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.db import connection
 from .forms import createLeagueForm
+from . import models
 
 def createLeagueView(request):
     # if this is a POST request we need to process the form data
@@ -40,3 +42,12 @@ def createLeagueView(request):
         form = createLeagueForm()
 
     return render(request, 'index/league/create.html', {'form': form})
+
+def leagueMenuView(request):
+	query_results = models.leagues.objects.raw("select * from league_leagues")
+
+	league_data = {
+		"league_details" : query_results
+	}
+	print league_data
+	return render_to_response('header.html', league_data, context_instance=RequestContext(request))
